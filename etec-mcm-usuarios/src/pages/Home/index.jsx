@@ -9,11 +9,11 @@ function Home(){
   async function getUsuarios() {
     const usuariosDaApi = await api.get('/cadastro')
     setUsuarios (usuariosDaApi.data)
-    console.log(usuarios)
+    //console.log(usuarios)
   }
 
   useEffect(()=>{
-    getUsuarios()
+    getUsuarios(usuarios)
   },[])
 
   return (
